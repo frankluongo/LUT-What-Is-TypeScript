@@ -22,5 +22,6 @@ const phone: any = "iPhone";
 
 // Never
 // const tablet: never = 3;
+//
 
 console.log(isOpen);
