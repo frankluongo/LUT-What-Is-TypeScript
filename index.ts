@@ -30,6 +30,7 @@ const phone: any = "iPhone";
 console.log(isOpen);
 
 // * 5: Functions in Typescript
+// ? ------------------------------------------------------
 
 const sayHello = (word: object): string => {
   let converted = JSON.stringify(word);
@@ -40,6 +41,7 @@ sayHello({name: "frank"});
 
 
 // * 6: Optional, Default & Rest Params
+// ? ------------------------------------------------------
 // Optionals
 // const sayWords = (word?: number): string => {
 //   console.log(word || 44);
@@ -49,18 +51,30 @@ sayHello({name: "frank"});
 // sayWords();
 
 // Default
-const sayWords = (word = 44): string => {
-  console.log(word || 44);
-  return `${word || 44}`;
-}
+// const sayWords = (word = 44): string => {
+//   console.log(word || 44);
+//   return `${word || 44}`;
+// }
 
-sayWords();
+// sayWords();
 
 // Rest
-const sayNumbers = (num = 44, ...otherStuff: any[]): string => {
-  console.log(num || 44);
-  console.log(otherStuff);
-  return `${num || 44}`;
-}
+// const sayNumbers = (num = 44, ...otherStuff: any[]): string => {
+//   console.log(num || 44);
+//   console.log(otherStuff);
+//   return `${num || 44}`;
+// }
 
-sayNumbers(55, 60, 70);
+// sayNumbers(55, 60, 70);
+
+
+// * 7: Implicit Types
+// ? ------------------------------------------------------
+
+// TypeScript implicitly assumes that newName is a sting and follows initially set string
+let newName = 'Scott';
+newName = 'Wes';
+// newName = 10;
+
+let newName2 = newName;
+// newName2 = 10;
