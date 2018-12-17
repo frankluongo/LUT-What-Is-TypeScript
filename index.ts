@@ -29,13 +29,38 @@ const phone: any = "iPhone";
 
 console.log(isOpen);
 
-// NOTE: Functions in Typescript
+// * 5: Functions in Typescript
 
 const sayHello = (word: object): string => {
   let converted = JSON.stringify(word);
-  console.log(word);
-  console.log(converted);
   return JSON.stringify(converted);
 }
 
 sayHello({name: "frank"});
+
+
+// * 6: Optional, Default & Rest Params
+// Optionals
+// const sayWords = (word?: number): string => {
+//   console.log(word || 44);
+//   return `${word || 44}`;
+// }
+
+// sayWords();
+
+// Default
+const sayWords = (word = 44): string => {
+  console.log(word || 44);
+  return `${word || 44}`;
+}
+
+sayWords();
+
+// Rest
+const sayNumbers = (num = 44, ...otherStuff: any[]): string => {
+  console.log(num || 44);
+  console.log(otherStuff);
+  return `${num || 44}`;
+}
+
+sayNumbers(55, 60, 70);
