@@ -28,3 +28,14 @@ const phone: any = "iPhone";
 //
 
 console.log(isOpen);
+
+// NOTE: Functions in Typescript
+
+const sayHello = (word: object): string => {
+  let converted = JSON.stringify(word);
+  console.log(word);
+  console.log(converted);
+  return JSON.stringify(converted);
+}
+
+sayHello({name: "frank"});
