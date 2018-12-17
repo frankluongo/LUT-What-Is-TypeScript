@@ -1,3 +1,6 @@
+// We need this: npm install --sav-dev parcel-plugin-typescript parcel-bundler@1.9.4
+// Will allow us to use compiler
+
 // Boolean
 const isOpen: boolean = false;
 
