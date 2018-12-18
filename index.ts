@@ -81,6 +81,7 @@ sayHello({name: "frank"});
 
 
 // * 8: Union Types
+// ? ------------------------------------------------------
 let newName: string | number | boolean = 'Scott';
 let newNameTwo = newName;
 // newNameTwo = false;
@@ -99,3 +100,24 @@ dog = null;
 dog = "Lucie";
 dog = undefined;
 dog = null;
+
+
+
+
+// * 9: Interfaces
+// ? ------------------------------------------------------
+
+interface Person {
+  name: string,
+  age?: number // Optional
+}
+
+const sayName = ({ name, age }: Person): Person => {
+  console.log(name);
+  age ? console.log(age) : console.log('no age given') ;
+  return {name, age};
+}
+
+sayName({age: 32, name: 'Scott'});
+
+
