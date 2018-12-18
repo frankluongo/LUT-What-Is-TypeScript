@@ -2,32 +2,32 @@
 // Will allow us to use compiler
 
 // Boolean
-const isOpen: boolean = false;
+// const isOpen: boolean = false;
 
 // String
-const Name: string = 'Scott';
+// const Name: string = 'Scott';
 
 // Number
-const myAge: number = 32;
+// const myAge: number = 32;
 
 // List
-const list: number[] = [0, 1, 2];
+// const list: number[] = [0, 1, 2];
 
 // Tuple
-const me: [string, number] = ["Scott", 32];
+// const me: [string, number] = ["Scott", 32];
 
 // Enum
-enum Job { WebDev, WebDesigner, PM }
-const job: Job = Job.WebDev;
+// enum Job { WebDev, WebDesigner, PM }
+// const job: Job = Job.WebDev;
 
 // Any
-const phone: any = "iPhone";
+// const phone: any = "iPhone";
 
 // Never
 // const tablet: never = 3;
 //
 
-console.log(isOpen);
+// console.log(isOpen);
 
 // * 5: Functions in Typescript
 // ? ------------------------------------------------------
@@ -72,9 +72,30 @@ sayHello({name: "frank"});
 // ? ------------------------------------------------------
 
 // TypeScript implicitly assumes that newName is a sting and follows initially set string
-let newName = 'Scott';
-newName = 'Wes';
-// newName = 10;
+// let newName: string | number | boolean = 'Scott';
+// newName = 'Wes';
+// // newName = 10;
 
-let newName2 = newName;
-// newName2 = 10;
+// let newName2 = newName;
+// // newName2 = 10;
+
+
+// * 8: Union Types
+let newName: string | number | boolean = 'Scott';
+let newNameTwo = newName;
+// newNameTwo = false;
+
+const makeMargin = (x: string | number): string => {
+  return `margin: ${x}px`;
+}
+
+makeMargin(10);
+makeMargin("10");
+
+// Null Types
+let dog: string = "Sammy";
+console.log({dog});
+dog = null;
+dog = "Lucie";
+dog = undefined;
+dog = null;
