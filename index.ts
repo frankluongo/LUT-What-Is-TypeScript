@@ -1,33 +1,39 @@
-// We need this: npm install --sav-dev parcel-plugin-typescript parcel-bundler@1.9.4
-// Will allow us to use compiler
+// * Notes
+// ? ------------------------------------------------------
+/*
+We need this: npm install --sav-dev parcel-plugin-typescript parcel-bundler@1.9.4
+Will allow us to use compiler
+*/
+
+
+// * 1-4: Getting Started
+// ? ------------------------------------------------------
 
 // Boolean
-// const isOpen: boolean = false;
+const isOpen: boolean = false;
 
 // String
-// const Name: string = 'Scott';
+const Name: string = 'Scott';
 
 // Number
-// const myAge: number = 32;
+const myAge: number = 32;
 
 // List
-// const list: number[] = [0, 1, 2];
+const list: number[] = [0, 1, 2];
 
 // Tuple
-// const me: [string, number] = ["Scott", 32];
+const me: [string, number] = ["Scott", 32];
 
 // Enum
-// enum Job { WebDev, WebDesigner, PM }
-// const job: Job = Job.WebDev;
+enum Job { WebDev, WebDesigner, PM }
+const job: Job = Job.WebDev;
 
 // Any
-// const phone: any = "iPhone";
+const phone: any = "iPhone";
 
 // Never
 // const tablet: never = 3;
-//
 
-// console.log(isOpen);
 
 // * 5: Functions in Typescript
 // ? ------------------------------------------------------
@@ -121,3 +127,29 @@ const sayName = ({ name, age }: Person): Person => {
 sayName({age: 32, name: 'Scott'});
 
 
+// * 10: Enums
+// ? ------------------------------------------------------
+
+enum Type {
+  Video,    // 0
+  BlogPost, // 1
+  Quiz      // 2
+}
+
+const createContent = (contentType: Type) => {
+  console.log(contentType);
+}
+createContent(Type.Quiz);
+
+enum Type2 {
+  Video = "VIDEO",
+  BlogPost = "BLOG_POST",
+  Quiz = "QUIZ"
+}
+
+
+const createContent2 = (contentType: Type2) => {
+  console.log(contentType);
+}
+
+createContent2(Type2.Quiz);
