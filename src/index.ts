@@ -113,7 +113,7 @@ dog = null;
 // * 9: Interfaces
 // ? ------------------------------------------------------
 
-import { Person } from './src/Interfaces';
+import { Person } from './Interfaces';
 
 const sayName = ({ name, age }: Person): Person => {
   console.log(name);
@@ -127,7 +127,7 @@ sayName({age: 32, name: 'Scott'});
 // * 10: Enums
 // ? ------------------------------------------------------
 
-import { Type } from './src/Enums';
+import { Type } from './Enums';
 
 const createContent = (contentType: Type) => {
   console.log(contentType);
@@ -183,5 +183,18 @@ Default Exports for enums will need to be defined, THEN imported
 enum Name ...
 
 export default Name
+
+*/
+
+// * 13: Config
+// ? ------------------------------------------------------
+
+/*
+
+  * Command Line:
+  npm install --save-dev typescript
+  tsc
+
+
 
 */
