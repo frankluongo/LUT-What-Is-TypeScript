@@ -153,3 +153,30 @@ const createContent2 = (contentType: Type2) => {
 }
 
 createContent2(Type2.Quiz);
+
+// * 11: Classes in TypeScript
+// ? ------------------------------------------------------
+
+class Team {
+  // Private Method or Variable
+  private teamName: string;
+
+  // Prevents changes outside of the constructor or at definition time
+  readonly teamType: string;
+
+  teamRecord: string;
+
+  constructor (teamName: string) {
+    this.teamName = teamName;
+    this.teamType = "Hockey";
+  }
+
+  // Defaults to Public Method
+  score (): string {
+    console.log(`${this.teamName}: GOOOOOOAAALLL!`);
+    return "YOYOOYOYOYOY!";
+  }
+}
+
+const RedWings = new Team('Red Wings');
+RedWings.score();
