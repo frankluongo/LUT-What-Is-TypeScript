@@ -113,10 +113,7 @@ dog = null;
 // * 9: Interfaces
 // ? ------------------------------------------------------
 
-interface Person {
-  name: string,
-  age?: number // Optional
-}
+import { Person } from './src/Interfaces';
 
 const sayName = ({ name, age }: Person): Person => {
   console.log(name);
@@ -130,11 +127,7 @@ sayName({age: 32, name: 'Scott'});
 // * 10: Enums
 // ? ------------------------------------------------------
 
-enum Type {
-  Video,    // 0
-  BlogPost, // 1
-  Quiz      // 2
-}
+import { Type } from './src/Enums';
 
 const createContent = (contentType: Type) => {
   console.log(contentType);
@@ -180,3 +173,15 @@ class Team {
 
 const RedWings = new Team('Red Wings');
 RedWings.score();
+
+// * 12: Modules
+// ? ------------------------------------------------------
+
+/*
+
+Default Exports for enums will need to be defined, THEN imported
+enum Name ...
+
+export default Name
+
+*/
