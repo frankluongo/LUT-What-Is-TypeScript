@@ -209,3 +209,21 @@ const outputInput = <T>(arg: T): T => {
 };
 
 outputInput("hi");
+
+// * 15: Duck Typing & Classes With Interfaces
+// ? ------------------------------------------------------
+
+class Dancer implements Person {
+  name: string;
+  age?: number;
+}
+
+let ElNino: Person = new Dancer();
+
+// You can ElNino to fake because it matches the requirements of Person
+const fake = {
+  name: "Scott",
+  year: 30
+}
+
+ElNino = fake;
