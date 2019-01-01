@@ -198,3 +198,14 @@ export default Name
 
 
 */
+
+
+// * 14: Generics
+// ? ------------------------------------------------------
+
+const outputInput = <T>(arg: T): T => {
+  console.log(arg);
+  return arg;
+};
+
+outputInput("hi");
