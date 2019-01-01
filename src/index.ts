@@ -227,3 +227,12 @@ const fake = {
 }
 
 ElNino = fake;
+
+
+// * 16: Webpack and TypeScript
+// ? ------------------------------------------------------
+
+/*
+  npm install --save-dev typescript ts-loader
+  Change files to .ts
+*/
